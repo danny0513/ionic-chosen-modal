@@ -1,0 +1,31 @@
+<ion-modal-view  class="live_chosen_modal" ng-class="{'actionSheet':mainObj.type=='actionSheet'}" on-tap="backdropToClose($event)">
+        <div class="bar-blue bar bar-header live_plr_6 disable-user-behavior item-input-inset " ng-show="mainObj.type!='actionSheet'">
+            <a on-tap="closeModal()" class="button  button-clear">
+                <i class="icon ion-ios-close-empty live_icons_32"></i>
+            </a>
+            <span class="title">
+                {{mainObj.title}}
+            </span>
+            <button class="button button-clear live_plr_12" ng-if="mainObj.hasCommit"  ng-click="commit()">提交</button>
+        </div>
+
+        <ion-content class="has-header " delegate-handle="chosen" ng-style="{bottom:mainObj.bottom+'px'}" >
+            <div class="actionSheet_header" ng-if="mainObj.type=='actionSheet'">
+                <i class="icon ion-ios-close-empty live_icons_32" on-tap="closeModal()"></i>{{mainObj.title}}
+            </div>
+            <div class="" ng-repeat="item in mainList">
+                <div class="main_list  "    ng-class="{'group ':!item.id,'active':item.active}" ng-hide="(mainObj.type=='actionSheet'||mainObj.group==false)&&item.id==undefined"  on-tap="tapList($index)">
+                    {{item.name}}
+                    <i class="icon ion-checkmark  " ng-show="item.active"></i>
+                </div>
+                <div ng-repeat="list in item.list" ng-show="item.active" on-tap="tapList($parent.$index,$index)">
+                    <div class="child_list "    ng-class="{'active':list.active}">
+                        {{list.name}}
+                        <i class="icon ion-checkmark  " ng-show="list.active"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="live_tc_red live_p_12" ng-if="checkMsg">{{checkMsg}}</div>
+        </ion-content>
+
+</ion-modal-view>

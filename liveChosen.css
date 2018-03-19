@@ -1,0 +1,77 @@
+.live_chosen_modal{
+
+}
+.live_chosen_modal .bar i{
+    font-size: 22px;
+    line-height: 34px;
+    margin-left: 10px;
+}
+.live_chosen_modal .main_list{
+    padding: 12px;
+    border: 1px solid #EFEFF4;
+}
+.live_chosen_modal .main_list.group{
+    background: #EFEFF4;
+    color: #A2A5B3;
+    padding: 2px 12px;
+}
+.live_chosen_modal .main_list.active{
+    color: #5AAFEE;
+    border-bottom: 1px solid #5AAFEE;
+}
+.live_chosen_modal .main_list  i{
+    float: right;
+}
+.live_chosen_modal .child_list {
+    padding: 12px;
+    padding-left: 24px;
+    border: 1px solid #EFEFF4;
+    background: #F7F7F7;
+}
+.live_chosen_modal .child_list.active {
+    color: #5AAFEE;
+    border-bottom: 1px solid #5AAFEE;
+}
+
+.live_chosen_modal .child_list i {
+    float: right;
+}
+.live_chosen_modal.actionSheet {
+    background: rgba(0,0,0,0);
+}
+
+.live_chosen_modal.actionSheet .scroll-content{
+    background: white;
+    top:auto !important;
+}
+.modal-backdrop-bg {
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    position: relative;
+    z-index: 1;
+}
+.live_chosen_modal.actionSheet .actionSheet_header{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    position: relative;
+}
+.live_chosen_modal.actionSheet .actionSheet_header i{
+    position: absolute;
+    left: 12px;
+    top:6px;
+    font-size: 20px;
+}
+.live_chosen_modal .live_icons_32:before{
+    font-size: 32px !important;
+}
+.live_chosen_modal .live_plr_6{
+    padding: 0 6px;
+}
+.live_chosen_modal  .live_plr_12{
+    padding: 0 12px;
+}
+.live_chosen_modal  .live_tc_red{
+    color: #dd514c;
+}
