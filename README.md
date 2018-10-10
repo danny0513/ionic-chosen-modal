@@ -53,8 +53,8 @@ app.controller('myCtrl', function(liveChosen) {
 
 |option | 属性 | 选项 |注译|
 |- | :-: | -: |-|
-|title| chart |无|顶部的标题|
+|title| string |无|顶部的标题|
 |list | array | 固定格式|需要展示的数据|
-|type | chart | 'actionSheet'或不填|2种不同的界面展示方式'actionSheet'只能单选|
+|type | string | 'actionSheet'或不填|2种不同的界面展示方式'actionSheet'只能单选|
 |multiple|boolean|true或false|是否多选(默认单选)| 
 |hasCommit|boolean|true或false|是否显示提交按钮（默认是点击直接返回选中数据）|
